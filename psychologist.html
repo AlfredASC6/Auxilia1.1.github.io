@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel = "stylesheet" href = "style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id = "chatroom"></div>
+        <form>
+                <input type = "text" id = "input">
+                <button id = "submit">submit to chat</button>
+
+        </form>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#config-web-app -->
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyBwzs6ieFDVbdazZYcMpvB2fnWvofSMNR8",
+                authDomain: "auxilia-aed8c.firebaseapp.com",
+                databaseURL: "https://auxilia-aed8c.firebaseio.com",
+                projectId: "auxilia-aed8c",
+                storageBucket: "",
+                messagingSenderId: "810117437053",
+                appId: "1:810117437053:web:04b4aea2b70a68af"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            
+            // conneting firebase to this page
+            let db = firebase.firestore();
+            // get referneces
+            let chat = document.getElementById("chatroom");
+            let button = document.getElementById("submit");
+            let input = document.getElementById("input");
+
+            button.onclick = function(event) {
+                event.preventDefault();
+
+                let date = newDate();
+                let month = date.getMonth();
+                let day = date.getDate();
+                month+= 1;
+                let timestamp = newDate().getTime();
+
+                chat.innerHTML = input.value;
+                db.collection("chat").add({
+                    "input" : input.value 
+                })
+                // console.log something when data is uploaded
+                .then(function(ref){
+                    console.log("Data was uploaded successfully with ref# " + ref.id);
+                });
+
+                // clear user input textbox
+                userinputtext.value = "";
+
+            }
+            db.collection("chat").orderby("timestamp")
+        </script>
+    </body>
+</html>

@@ -1,0 +1,379 @@
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'Tinos', serif;
+    font-size: 24px;
+
+
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    
+  }
+  
+  /* Links inside the navbar */
+  .navbar div {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+    image-rendering: optimizeQuality;
+
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px; 
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar div:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+    cursor: pointer;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content div {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content div:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+#motivate {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#search {
+  float: left;
+  font-size: 20px;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+
+  display:flex;
+  align-content: stretch;
+  justify-content: center;
+}
+#enter {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+#quote {
+    float: right;
+    width: 25%;
+    max-height: 230px;
+    border: solid black 3px;
+
+    font-family: 'Cutive Mono', monospace;
+    font-size: 18px;
+
+    /* NOTE: Use for possible font switch when reloading */
+    /* font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Quattrocento', serif; */
+}
+#column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#motivate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#poems {
+  float: left;
+  width: 25%;
+  height: 200px;
+  border: solid black 3px;
+  overflow: auto;
+
+  font-family: 'Cookie', cursive;
+  font-size: 18px;
+}
+#center_these {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#others_tab {
+  display: flex;
+}
+#person1 {
+  border: solid black 3px;
+  
+  background-color: antiquewhite;
+}
+
+
+#person2{
+ border: solid black 3px;
+
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ font-size: 12px;
+
+ background-color: aquamarine;
+}
+
+html{
+  background-image: linear-gradient(rgb(24, 253, 81),rgba(16, 221, 160, 0.856),rgb(19, 175, 247));
+  height: 100%;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+
+}
+
+/*this is for the front page*/
+#title{
+  
+  font-family: 'Nunito', sans-serif;
+  font-size: 48px;
+  font-stretch: expanded;
+}
+
+#home {
+  width: 100px;
+  height: 100%;
+}
+
+#login_tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 480px;
+}
+
+#login {
+  text-decoration: none;
+}
+
+#normal_user {
+  display: flex;
+  flex-direction: column;
+}
+#therapist {
+  display: flex;
+  flex-direction: column;
+}
+
+#chatroom{
+ color:green;
+}
+
+#logo{
+  width: 50px;
+  height: inherit;
+}
+
+
+#after-Login{
+  display: none;
+}
+
+#header{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#motivate_tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#Motivational_quotes {
+  border: solid black 3px;
+  padding: 5px;
+  overflow: scroll;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 250px;
+  height:inherit;
+  position: relative;
+  margin: auto;
+
+  display:flex;
+  align-items: center;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 6.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.6s;
+  animation-name: fade;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-emphasis: bold;
+}
+#person1 {
+    border: solid black 3px;
+    background-color: #f8ecec;
+    border-radius: 30px;
+    padding: 5px;
+}
+#person2{
+    border: solid black 3px;
+    background-color: #f8ecec;
+    border-radius: 30px;
+    padding: 5px;
+  }
+
+
+#textlocation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8ecec;
+  border: solid black 3px;
+  border-radius: 30px;
+  height: 500px;
+  width: 90%;
+  overflow: auto;
+  padding: 5px;
+}

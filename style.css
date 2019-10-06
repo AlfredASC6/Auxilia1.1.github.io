@@ -377,3 +377,10 @@ footer {
   overflow: auto;
   padding: 5px;
 }
+
+
+#chatroom{
+  width: 500px;
+  length: 200px;
+  
+}
